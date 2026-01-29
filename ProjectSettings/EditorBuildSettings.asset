@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 5f2561e54bb79e04e8e6cd220f0b548c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/annika.unity
     guid: a35b50c062cde604ead5732eb7a75dcf
+  - enabled: 1
+    path: Assets/Scenes/PapuScene.unity
+    guid: f796a19563e42c14285d797c0307d1b5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

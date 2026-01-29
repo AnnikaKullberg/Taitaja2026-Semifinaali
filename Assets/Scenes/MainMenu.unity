@@ -1305,7 +1305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39455698089a15840b9c1d5426ea46ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
-  gameSceneName: annika
+  gameSceneName: PapuScene
   optionsPanel: {fileID: 1520866708}
   latestTimeText: {fileID: 651015805}
   bestTimeText: {fileID: 1767101824}

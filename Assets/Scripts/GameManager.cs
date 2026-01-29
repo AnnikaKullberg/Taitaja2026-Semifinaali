@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
 
         bestTimeText.text = bestTime > 0 ? "Best Time: " + TimeSpan.FromSeconds(bestTime).ToString(@"mm\:ss\.ff") : "Best Time: --:--.--";
         timerText.text = currentTime > 0 ? TimeSpan.FromSeconds(currentTime).ToString(@"mm\:ss\.ff") : "00:00.00";
+
+        StartRun();
     }
 
     public void StartRun()
