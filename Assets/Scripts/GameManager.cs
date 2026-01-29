@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     private float latestTime;
     private float bestTime;
 
+    public GameObject player;
+    public GameObject water;
+
     private void Start()
     {
         currentTime = 0f;
@@ -22,17 +25,32 @@ public class GameManager : MonoBehaviour
         timerText.text = currentTime > 0 ? TimeSpan.FromSeconds(currentTime).ToString(@"mm\:ss\.ff") : "00:00.00";
     }
 
+    public void StartRun()
+    {
+        StartTimer();
+        water.GetComponent<Water>().canMove = true;
+        water.GetComponent<Water>().StartCoroutine("FadeInAudio");
+    }
+
+    public void EndRun()
+    {
+        StopTimer();
+        water.GetComponent<Water>().canMove = false;
+        water.GetComponent<Water>().audioSource.volume = 0f;
+        water.GetComponent<Water>().animator.enabled = false;
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
-            StartTimer();
+            StartRun();
 
         }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            StopTimer();
+            EndRun();
 
         }
 
@@ -48,6 +66,17 @@ public class GameManager : MonoBehaviour
 
         }
     }
+
+    public void PlayerLose()
+    {
+        StopTimer();
+    }
+
+    public void PlayerWin()
+    {
+        StopTimer();
+    }
+
 
     public void StartTimer()
     {

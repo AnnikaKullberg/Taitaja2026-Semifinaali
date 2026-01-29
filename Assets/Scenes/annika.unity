@@ -187,6 +187,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
+--- !u!114 &1130233034 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1365944389446824574, guid: fbbd98f1e23c05547ab895bd8ecfdfee, type: 3}
+  m_PrefabInstance: {fileID: 3243554108524953084}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4006a550268e9544a580da8a595c039, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
 --- !u!1 &1472474650
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,6 +425,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
+--- !u!1 &2037725906 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4905990656345033057, guid: a0e21948e2276924a8666b0b169442f1, type: 3}
+  m_PrefabInstance: {fileID: 310567670}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2062993146 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6695717602922535747, guid: d42f5ea6990ce8a498999e0d62a3d9da, type: 3}
+  m_PrefabInstance: {fileID: 7492023720606450311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3243554108524953084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -462,6 +483,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1365944389446824574, guid: fbbd98f1e23c05547ab895bd8ecfdfee, type: 3}
+      propertyPath: water
+      value: 
+      objectReference: {fileID: 2062993146}
+    - target: {fileID: 1365944389446824574, guid: fbbd98f1e23c05547ab895bd8ecfdfee, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2037725906}
     - target: {fileID: 1365944389446824574, guid: fbbd98f1e23c05547ab895bd8ecfdfee, type: 3}
       propertyPath: timerText
       value: 
@@ -584,6 +613,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7666fae8f66bc0b4d9c73820567aae19, type: 3}
+--- !u!1001 &7492023720606450311
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1611008473467091945, guid: d42f5ea6990ce8a498999e0d62a3d9da, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1130233034}
+    - target: {fileID: 1859688102257689021, guid: d42f5ea6990ce8a498999e0d62a3d9da, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -33.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859688102257689021, guid: d42f5ea6990ce8a498999e0d62a3d9da, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859688102257689021, guid: d42f5ea6990ce8a498999e0d62a3d9da, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859688102257689021, guid: d42f5ea6990ce8a498999e0d62a3d9da, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9909007
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859688102257689021, guid: d42f5ea6990ce8a498999e0d62a3d9da, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859688102257689021, guid: d42f5ea6990ce8a498999e0d62a3d9da, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859688102257689021, guid: d42f5ea6990ce8a498999e0d62a3d9da, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.13459498
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859688102257689021, guid: d42f5ea6990ce8a498999e0d62a3d9da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859688102257689021, guid: d42f5ea6990ce8a498999e0d62a3d9da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859688102257689021, guid: d42f5ea6990ce8a498999e0d62a3d9da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -15.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 6695717602922535747, guid: d42f5ea6990ce8a498999e0d62a3d9da, type: 3}
+      propertyPath: m_Name
+      value: Water
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d42f5ea6990ce8a498999e0d62a3d9da, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -593,3 +683,4 @@ SceneRoots:
   - {fileID: 1472474653}
   - {fileID: 3243554108524953084}
   - {fileID: 310567670}
+  - {fileID: 7492023720606450311}
