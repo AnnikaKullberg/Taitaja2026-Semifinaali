@@ -9,16 +9,17 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text bestTimeText;
 
     private float currentTime;
-    public float bestTime;
+    private float latestTime;
+    private float bestTime;
 
     private void Start()
     {
         currentTime = 0f;
         bestTime = PlayerPrefs.GetFloat("BestTime", 0f);
+        latestTime = PlayerPrefs.GetFloat("LatestTime", 0f);
 
-        timerText.text = currentTime.ToString("00:00:00");
-        bestTimeText.text = "Best Time: " + TimeSpan.FromSeconds(bestTime).ToString(@"mm\:ss\.ff");
-
+        bestTimeText.text = bestTime > 0 ? "Best Time: " + TimeSpan.FromSeconds(bestTime).ToString(@"mm\:ss\.ff") : "Best Time: --:--.--";
+        timerText.text = currentTime > 0 ? TimeSpan.FromSeconds(currentTime).ToString(@"mm\:ss\.ff") : "00:00.00";
     }
 
     private void Update()
@@ -40,6 +41,12 @@ public class GameManager : MonoBehaviour
             ResetBestTime();
 
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+
+        }
     }
 
     public void StartTimer()
@@ -51,6 +58,8 @@ public class GameManager : MonoBehaviour
     {
         StopAllCoroutines();
         CheckBestTime();
+        latestTime = currentTime;
+        PlayerPrefs.SetFloat("LatestTime", latestTime);
         currentTime = 0f;
     }
 
@@ -82,7 +91,7 @@ public class GameManager : MonoBehaviour
 
     public void CheckBestTime()
     {
-        if (currentTime > bestTime)
+        if (currentTime < bestTime)
         {
             bestTime = currentTime;
             PlayerPrefs.SetFloat("BestTime", bestTime);
@@ -95,7 +104,7 @@ public class GameManager : MonoBehaviour
 
         else
         {
-            Debug.Log("Best Time: " + bestTime.ToString("00:00:00"));
+            Debug.Log("Best Time: " + bestTime.ToString("00:00.00"));
         }
     }
 
